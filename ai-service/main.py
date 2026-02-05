@@ -4,8 +4,8 @@ from contextlib import asynccontextmanager
 import numpy as np
 import cv2
 import os
-import tensorflow as tf
-import gc # Garbage collection for memory safety
+import gc
+import tflite_runtime.interpreter as tf
 
 # --- CONFIGURATION ---
 MODEL_FILE = "model_gender_nonq.tflite"
