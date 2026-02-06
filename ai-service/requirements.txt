@@ -1,7 +1,10 @@
-fastapi
-uvicorn
-python-multipart
-numpy
+fastapi==0.109.2
+uvicorn==0.27.1
+python-multipart==0.0.9
+requests==2.31.0
+# Force NumPy to version 1.x to stop the crash
+numpy==1.26.4
+# Use opencv headless for small server footprint
 opencv-python-headless
-tflite-runtime  
-requests
+# The lightweight AI runtime
+tflite-runtime
