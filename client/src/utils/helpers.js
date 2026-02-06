@@ -7,7 +7,7 @@ export const verifyUser = async (imageBlob) => {
   const fingerprint = localStorage.getItem("fingerprint");
   if (fingerprint) formData.append("fingerprint", fingerprint);
 
-  const response = await fetch(`${API_BASE_URL}/verify`, {
+  const response = await fetch(`${API_BASE_URL}/api/verify`, {
     method: "POST",
     body: formData,
   });
