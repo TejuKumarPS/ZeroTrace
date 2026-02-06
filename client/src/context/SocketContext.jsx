@@ -16,9 +16,11 @@ export const SocketProvider = ({ children }) => {
 
   // 1. Initialize Connection (Only when we have a token)
   const connectSocket = (token, gender) => {
-    const newSocket = io("", {
-      auth: { token }, // specific to your backend auth logic
+    const newSocket = io(apiUrl, {
+      auth: { token },
       query: { gender },
+      transports: ["websocket"],
+      reconnectionAttempts: 5,
     });
 
     newSocket.on("connect", () => console.log("✅ Connected to Socket"));

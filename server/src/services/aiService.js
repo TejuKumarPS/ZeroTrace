@@ -16,6 +16,8 @@ export const checkGenderWithAI = async (fileBuffer) => {
       headers: {
         ...formData.getHeaders(),
       },
+      timeout: 60000,
+      maxBodyLength: Infinity,
     });
 
     return response.data;
